@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Pokemon from "./components/pokemon/Pokemon";
 import "./App.bootstrap.min.css";
@@ -15,10 +13,9 @@ function App() {
         <NavBar />
         <div className="container">
           <Routes>
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/" element={<Dashboard />} />
 
-            <Route exact path="/pokemon/:pokemonIndex" component={Pokemon} />
-            <Dashboard />
+            <Route exact path="/pokemon/:pokemonIndex" element={<Pokemon />} />
           </Routes>
         </div>
       </div>
